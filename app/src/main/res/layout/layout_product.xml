@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/productDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/placeholder_product" />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Garnier Fructics Conditioner "
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/productPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/discountedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Rs 256"
+                android:textColor="@color/red1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/originalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Rs 256"
+                android:textColor="@color/lightGray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/productRatingLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ratingStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star_rate" />
+
+                <TextView
+                    android:id="@+id/productRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4.5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomHorizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightGray" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/offerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="Buy 1 Get 1"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/wishlistImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_favorite_border" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/leftVerticalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@color/lightGray" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightVerticalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@color/lightGray" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
