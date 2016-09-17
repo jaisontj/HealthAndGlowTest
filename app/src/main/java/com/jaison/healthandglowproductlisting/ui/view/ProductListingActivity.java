@@ -2,15 +2,12 @@ package com.jaison.healthandglowproductlisting.ui.view;
 
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.widget.TextView;
+import android.view.Menu;
 import android.widget.Toast;
 
 import com.jaison.healthandglowproductlisting.R;
@@ -56,6 +53,7 @@ public class ProductListingActivity extends AppCompatActivity implements Product
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
         presenter = new ProductListingPresenterImpl(this);
+
     }
 
     @Override
@@ -90,5 +88,11 @@ public class ProductListingActivity extends AppCompatActivity implements Product
     public void showError(ServerError error, String message) {
         //Handle error whichever way you like
         Toast.makeText(this, "Error: " + error.toString() + " Message: " + message, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
